@@ -1,0 +1,46 @@
+    .logo {
+        width: 75px;
+        height: 75px;
+    }
+    
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        display: flex;
+    }
+    
+    .navbar {
+        background: rgba(255, 255, 255, 0.534)!important;
+    }
+    
+    #home {
+        height: 100vh;
+        padding-top: 25vh;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #prodigy>h1 {
+        font-size: 4.5rem;
+        background: -webkit-linear-gradient(to right, #0f2027, #203a43, #2c5364);
+        background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+        -webkit-background-clip: text;
+        font-weight: bolder;
+        text-shadow: 4px 4px 4px grey;
+        margin: 20px;
+    }
+    
+    #prodigy>p {
+        font-size: 1.2rem;
+        word-wrap: break-word;
+        font-weight: bold;
+    }
+    
+    #prodigyLogo {
+        width: 40vw;
+    }
