@@ -34,58 +34,23 @@
  }
  
  #prodigy {
-     padding: 100px;
+     padding: 120px;
  }
  
  #prodigy>h1 {
      font-size: 4rem;
      font-weight: bolder;
  }
- /* #prodigy>h1>a {
-     position: relative;
- }
  
- #prodigy>h1>a::before,
- #prodigy>h1>a::after {
-     content: "PRODIGY '22";
-     display: block;
-     opacity: 0.8;
-     position: absolute;
-     top: 0;
-     left: 0;
-     width: 100%;
-     height: 100%;
- }
- 
- #prodigy>h1>a::after {
-     content: "PRODIGY '22"!important;
-     color: cyan;
- }
- 
- #prodigy>h1>a::before {
-     content: "PRODIGY '22"!important;
-     color: purple;
- }
- 
- #prodigy>h1>a::after:hover {
-     animation-name: glitch;
-     animation-duration: 1s;
-     animation-iteration-count: infinite;
- }
- 
- #prodigy>h1>a::before:hover {
-     animation-name: glitch;
-     animation-duration: 1s;
-     animation-iteration-count: infinite;
-     animation-direction: reverse;
- } */
- 
- #prodigy>h1>a {
+ .prodigy-title {
      text-decoration: none;
      color: white;
+     animation-name: title;
+     animation-duration: 1s;
+     animation-iteration-count: infinite;
  }
  
- #prodigy>h1>a:hover {
+ .prodigy-title:hover {
      color: rgba(255, 255, 255, 0.623);
  }
  
@@ -214,48 +179,29 @@
  ::-webkit-scrollbar-thumb:hover {
      background: rgb(59, 59, 59);
  }
- /*  
- @keyframes glitch {
-     0% {
-         transform: translate(0)
-     }
-     20% {
-         transform: translate(-5px, 5px)
-     }
-     40% {
-         transform: translate(-5px, -5px)
-     }
-     60% {
-         transform: translate(5px, 5px)
-     }
-     80% {
-         transform: translate(5px, -5px)
-     }
-     100% {
-         transform: translate(0)
-     }
- }
  
- @keyframes fadeout {
+ @keyframes title {
      0% {
-         opacity: 1;
+         text-shadow: none;
+         text-shadow: 3px 3px cyan;
+     }
+     25% {
+         text-shadow: none;
+         text-shadow: -3px 3px cyan;
+     }
+     50% {
+         text-shadow: none;
+         text-shadow: -3px -3px cyan;
+     }
+     75% {
+         text-shadow: none;
+         text-shadow: 3px -3px cyan;
      }
      100% {
-         opacity: 0;
-         display: '';
+         text-shadow: none;
+         text-shadow: 3px 3px cyan;
      }
  }
- 
- @keyframes fadein {
-     0% {
-         opacity: 0;
-         display: 'block';
-     }
-     100% {
-         opacity: 1;
-     }
- }
-  */
  
  @media only screen and (max-width:1000px) {
      #home {
