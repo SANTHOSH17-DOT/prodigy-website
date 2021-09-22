@@ -24,7 +24,7 @@
  }
  
  #home {
-     min-height: 90vh;
+     min-height: 80vh;
      text-align: center;
      display: flex;
      flex-direction: row;
@@ -282,12 +282,6 @@
      #prodigy {
          padding: 20px;
      }
-     #prodigy>h1>a::after {
-         top: -153px;
-     }
-     #prodigy>h1>a::before {
-         top: 155px;
-     }
      #contacts {
          flex-direction: column;
      }
@@ -307,7 +301,7 @@
          font-size: 3rem;
      }
      #paths {
-         font-size: 0.65rem;
+         font-size: 0.7rem;
      }
      #prodigy>p {
          font-size: 1rem;
