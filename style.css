@@ -34,11 +34,11 @@
  }
  
  #prodigy {
-     padding: 120px;
+     padding: 120px 50px;
  }
  
  #prodigy>h1 {
-     font-size: 4rem;
+     font-size: 5rem;
      font-weight: bolder;
  }
  
@@ -61,22 +61,48 @@
      color: rgb(163, 163, 163);
  }
  
+ .content {
+     background-color: rgb(0, 132, 255);
+     padding: 20px;
+     margin: auto;
+     width: 90vw;
+ }
+ 
+ .fa-cog {
+     color: rgb(253, 215, 1);
+     animation: rotate 1s linear infinite;
+ }
+ 
+ #paths {
+     font-size: 2rem;
+ }
+ 
+ #paths>a {
+     text-decoration: none;
+ }
+ 
+ #slash {
+     color: white;
+ }
+ 
  #about,
  #events,
  #findUs {
      text-align: left;
      padding: 20px;
      width: 90vw;
-     max-width: 1200px;
+     max-width: 900px;
      max-height: 500px;
      overflow: auto;
      margin: auto;
      margin-bottom: 20px;
-     background-color: rgb(255, 255, 255);
-     border-top-right-radius: 50px;
-     border-bottom-left-radius: 50px;
+     margin-top: 20px;
+     background-color: black;
+     color: white;
+     border-top-left-radius: 50px;
+     border-bottom-right-radius: 50px;
      position: relative;
-     transition: all ease 500ms;
+     box-shadow: -4px 4px 4px rgb(1, 55, 99);
  }
  
  #events {
@@ -87,40 +113,58 @@
      display: none;
  }
  
- #events::-webkit-scrollbar {
-     background: black;
+ #events::-webkit-scrollbar,
+ #findUs::-webkit-scrollbar,
+ #about::-webkit-scrollbar {
+     background: rgb(0, 132, 255);
      width: 10px;
  }
  
- #events::-webkit-scrollbar-thumb {
-     background: white;
+ #about::-webkit-scrollbar-thumb,
+ #events::-webkit-scrollbar-thumb,
+ #findUs::-webkit-scrollbar-thumb {
+     background: rgb(253, 215, 1);
      border-radius: 5px;
-     border: 2px solid black;
+     border: none;
  }
  
  #about>h2,
- #events>h2 {
+ #events>h2,
+ #findUs>h2 {
      text-align: center;
-     font-weight: bold;
+     font-weight: bolder;
      font-size: 2.5rem;
-     margin: 10px;
+     margin: 20px;
+     color: rgb(253, 215, 1);
+     text-shadow: 2px 2px 2px rgb(128, 128, 0);
+ }
+ 
+ #events>div>h3 {
+     background: linear-gradient(to right, rgb(7, 226, 255) 0%, rgb(0, 94, 170) 50%);
+     -webkit-background-clip: text;
+     color: transparent;
  }
  
  #about>p {
      font-size: 1rem;
  }
  
+ #cert {
+     margin: 10px 0px;
+     color: rgb(0, 202, 0);
+ }
+ 
  .arrows {
      margin: auto;
      width: 90vw;
-     max-width: 1200px;
+     max-width: 900px;
      text-align: right;
  }
  
  .fa-caret-left,
  .fa-caret-right {
      font-size: 4rem;
-     color: white;
+     color: rgb(255, 255, 255);
      margin: 5px 10px;
      transition: all ease 200ms;
  }
@@ -131,20 +175,34 @@
  }
  
  .footer {
-     color: white;
-     padding: 20px 40px;
-     width: 90vw;
+     background-color: rgb(253, 215, 1);
+ }
+ 
+ .footer>div {
+     color: rgb(0, 0, 0);
+     background-color: rgb(253, 215, 1);
+     padding: 40px 80px;
      min-width: 300px;
-     margin: auto;
      display: flex;
      justify-content: space-between;
-     margin-top: 60px;
+     width: 90vw;
+     margin: auto;
+     text-align: center;
+ }
+ 
+ .footer>div>h2 {
+     font-weight: bolder;
+     font-size: 2rem;
  }
  
  .social {
      font-size: 2rem;
      margin: 20px 20px;
      transition: all ease 200ms;
+ }
+ 
+ #contacts>div {
+     margin: 10px 20px;
  }
  
  .social:hover {
@@ -158,11 +216,17 @@
  
  #map {
      position: absolute;
+     margin: auto;
      top: 0;
      bottom: 0;
      width: 60vw;
+     margin-left: 20px;
      min-width: 200px;
      max-width: 800px;
+ }
+ 
+ #findUs>p {
+     margin: 20px;
  }
  
  ::-webkit-scrollbar {
@@ -180,26 +244,35 @@
      background: rgb(59, 59, 59);
  }
  
+ @keyframes rotate {
+     0% {
+         transform: rotate(0deg);
+     }
+     100% {
+         transform: rotate(360deg);
+     }
+ }
+ 
  @keyframes title {
      0% {
          text-shadow: none;
-         text-shadow: 3px 3px cyan;
+         text-shadow: 3px 3px rgb(0, 132, 255);
      }
      25% {
          text-shadow: none;
-         text-shadow: -3px 3px cyan;
+         text-shadow: -3px 3px rgb(0, 132, 255);
      }
      50% {
          text-shadow: none;
-         text-shadow: -3px -3px cyan;
+         text-shadow: -3px -3px rgb(0, 132, 255);
      }
      75% {
          text-shadow: none;
-         text-shadow: 3px -3px cyan;
+         text-shadow: 3px -3px rgb(0, 132, 255);
      }
      100% {
          text-shadow: none;
-         text-shadow: 3px 3px cyan;
+         text-shadow: 3px 3px rgb(0, 132, 255);
      }
  }
  
@@ -216,46 +289,58 @@
      #prodigy>h1>a::before {
          top: 155px;
      }
+     #contacts {
+         flex-direction: column;
+     }
+     #paths {
+         font-size: 1.2rem;
+     }
+     .logo {
+         width: 50px;
+     }
+     .footer>div {
+         padding: 40px 40px;
+     }
  }
  
  @media only screen and (max-width:440px) {
      #prodigy>h1 {
          font-size: 3rem;
      }
+     #paths {
+         font-size: 0.65rem;
+     }
      #prodigy>p {
          font-size: 1rem;
      }
-     #prodigy>h1>a::after {
-         top: -115px;
-     }
-     #prodigy>h1>a::before {
-         top: 115px;
-     }
      .logo {
-         width: 50px;
+         width: 30px;
      }
      #about {
-         padding: 5px;
+         padding: 10px;
          margin: auto;
          border-top-right-radius: 30px;
          border-bottom-left-radius: 30px;
      }
      #about>h2 {
          font-weight: bold;
-         font-size: 2rem;
-         margin: 10px;
+         font-size: 2.5rem;
+         margin: 20px;
      }
      #about>p {
          text-align: left;
          font-size: 1rem;
      }
      .footer {
-         padding: 20px 20px;
-         width: 90vw;
+         width: 100vw;
          margin: auto;
          display: flex;
          flex-direction: column;
          justify-content: space-between;
+     }
+     .footer>div {
+         width: 100vw;
+         padding: 40px 40px;
      }
      .social {
          font-size: 1.5rem;
@@ -267,7 +352,11 @@
      .footer>div {
          margin-top: 20px;
      }
+     #findUs>h2 {
+         font-size: 2rem;
+     }
      #map {
-         width: 80vw;
+         width: 100%;
+         margin-left: 0;
      }
  }
