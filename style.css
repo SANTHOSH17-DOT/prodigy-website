@@ -1,46 +1,285 @@
-    .logo {
-        width: 75px;
-        height: 75px;
-    }
-    
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    
-    body {
-        display: flex;
-    }
-    
-    .navbar {
-        background: rgba(255, 255, 255, 0.534)!important;
-    }
-    
-    #home {
-        height: 100vh;
-        padding-top: 25vh;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-    }
-    
-    #prodigy>h1 {
-        font-size: 4.5rem;
-        background: -webkit-linear-gradient(to right, #0f2027, #203a43, #2c5364);
-        background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-        -webkit-background-clip: text;
-        font-weight: bolder;
-        text-shadow: 4px 4px 4px grey;
-        margin: 20px;
-    }
-    
-    #prodigy>p {
-        font-size: 1.2rem;
-        word-wrap: break-word;
-        font-weight: bold;
-    }
-    
-    #prodigyLogo {
-        width: 40vw;
-    }
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     cursor: url("https://img.icons8.com/fluency/30/000000/cursor--v1.png"), default;
+ }
+ 
+ body {
+     background-color: black!important;
+ }
+ 
+ .logo {
+     width: 75px;
+ }
+ 
+ .navbar {
+     background: black;
+ }
+ 
+ #prodigyLogo {
+     width: 40vw;
+     max-width: 500px;
+     min-width: 200px;
+ }
+ 
+ #home {
+     min-height: 90vh;
+     text-align: center;
+     display: flex;
+     flex-direction: row;
+     padding: 50px 20px;
+     background: black;
+     max-width: 1200px;
+ }
+ 
+ #prodigy {
+     padding: 100px;
+ }
+ 
+ #prodigy>h1 {
+     font-size: 4rem;
+     font-weight: bolder;
+     margin: 20px;
+ }
+ 
+ #prodigy>h1>a::before,
+ #prodigy>h1>a::after {
+     content: "PRODIGY '22";
+     display: block;
+     opacity: 0.8;
+     position: relative;
+ }
+ 
+ #prodigy>h1>a::after {
+     content: "PRODIGY '22"!important;
+     color: cyan;
+     top: -77px;
+ }
+ 
+ #prodigy>h1>a::before {
+     content: "PRODIGY '22"!important;
+     color: purple;
+     top: 77px;
+ }
+ 
+ #prodigy>h1>a::after:hover {
+     animation-name: glitch;
+     animation-duration: 1s;
+     animation-iteration-count: infinite;
+ }
+ 
+ #prodigy>h1>a::before:hover {
+     animation-name: glitch;
+     animation-duration: 1s;
+     animation-iteration-count: infinite;
+     animation-direction: reverse;
+ }
+ 
+ #prodigy>h1>a {
+     text-decoration: none;
+     color: white;
+ }
+ 
+ #prodigy>h1>a:hover {
+     color: rgba(255, 255, 255, 0.623);
+ }
+ 
+ #prodigy>p {
+     font-size: 1.2rem;
+     word-wrap: break-word;
+     font-weight: bold;
+     color: rgb(163, 163, 163);
+ }
+ 
+ #about,
+ #events {
+     text-align: left;
+     padding: 20px;
+     width: 90vw;
+     max-width: 1200px;
+     margin: auto;
+     margin-bottom: 20px;
+     background-color: rgb(255, 255, 255);
+     border-top-right-radius: 50px;
+     border-bottom-left-radius: 50px;
+     transition: all ease 500ms;
+ }
+ 
+ #events {
+     display: none;
+ }
+ 
+ #about>h2,
+ #events>h2 {
+     text-align: center;
+     font-weight: bold;
+     font-size: 2.5rem;
+     margin: 10px;
+ }
+ 
+ #about>p {
+     font-size: 1rem;
+ }
+ 
+ .arrows {
+     margin: auto;
+     width: 90vw;
+     max-width: 1200px;
+     text-align: right;
+ }
+ 
+ .fa-caret-left,
+ .fa-caret-right {
+     font-size: 4rem;
+     color: white;
+     margin: 5px 10px;
+     transition: all ease 200ms;
+ }
+ 
+ .fa-caret-left:hover,
+ .fa-caret-right:hover {
+     transform: scale(1.25);
+ }
+ 
+ .footer {
+     color: white;
+     padding: 20px 40px;
+     width: 90vw;
+     min-width: 300px;
+     margin: auto;
+     display: flex;
+     justify-content: space-between;
+     margin-top: 60px;
+ }
+ 
+ .social {
+     font-size: 2rem;
+     margin: 20px 20px;
+     transition: all ease 200ms;
+ }
+ 
+ .social:hover {
+     transform: scale(1.5);
+ }
+ 
+ ::-webkit-scrollbar {
+     width: 20px;
+     background-color: rgb(255, 255, 255);
+ }
+ 
+ ::-webkit-scrollbar-thumb {
+     background: black;
+     border-radius: 5px;
+ }
+ 
+ ::-webkit-scrollbar-thumb:hover {
+     background: rgb(59, 59, 59);
+ }
+ 
+ @keyframes glitch {
+     0% {
+         transform: translate(0)
+     }
+     20% {
+         transform: translate(-5px, 5px)
+     }
+     40% {
+         transform: translate(-5px, -5px)
+     }
+     60% {
+         transform: translate(5px, 5px)
+     }
+     80% {
+         transform: translate(5px, -5px)
+     }
+     100% {
+         transform: translate(0)
+     }
+ }
+ 
+ @keyframes fadeout {
+     0% {
+         opacity: 1;
+     }
+     100% {
+         opacity: 0;
+         display: '';
+     }
+ }
+ 
+ @keyframes fadein {
+     0% {
+         opacity: 0;
+         display: 'block';
+     }
+     100% {
+         opacity: 1;
+     }
+ }
+ 
+ @media only screen and (max-width:1000px) {
+     #home {
+         flex-direction: column;
+     }
+     #prodigy {
+         padding: 20px;
+     }
+     #prodigy>h1>a::after {
+         top: -153px;
+     }
+     #prodigy>h1>a::before {
+         top: 155px;
+     }
+ }
+ 
+ @media only screen and (max-width:440px) {
+     #prodigy>h1 {
+         font-size: 3rem;
+     }
+     #prodigy>p {
+         font-size: 1rem;
+     }
+     #prodigy>h1>a::after {
+         top: -115px;
+     }
+     #prodigy>h1>a::before {
+         top: 115px;
+     }
+     .logo {
+         width: 50px;
+     }
+     #about {
+         padding: 5px;
+         margin: auto;
+         border-top-right-radius: 30px;
+         border-bottom-left-radius: 30px;
+     }
+     #about>h2 {
+         font-weight: bold;
+         font-size: 2rem;
+         margin: 10px;
+     }
+     #about>p {
+         text-align: left;
+         font-size: 1rem;
+     }
+     .footer {
+         padding: 20px 20px;
+         width: 90vw;
+         margin: auto;
+         display: flex;
+         flex-direction: column;
+         justify-content: space-between;
+     }
+     .social {
+         font-size: 1.5rem;
+         margin: 10px 10px;
+     }
+     .social:hover {
+         transform: scale(1.5);
+     }
+     .footer>div {
+         margin-top: 20px;
+     }
+ }
